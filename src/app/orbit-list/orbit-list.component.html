@@ -9,20 +9,18 @@
    </tr>
    <tr *ngFor= "let satellite of satellites">
        <td>{{satellite.name}}</td>
-       <td *ngIf= "satellite.shouldShowWarning(); else shouldNotShowWarning" [class.warning-style]="" >{{satellite.type}}</td>
+       <td [class.warning]="satellite.type" *ngIf= "satellite.shouldShowWarning() === true"> {{satellite.type}} </td>
        <td>{{satellite.operational}}</td>
        <td>{{satellite.orbitType}}</td>
        <td>{{satellite.launchDate}}</td>
    </tr>
 
-   <ng-template #shouldNotShowWarning>
-   <tr *ngFor= "let satellite of satellites">
-      <td>{{satellite.name}}</td>
-      <td>{{satellite.type}}</td>
-      <td>{{satellite.operational}}</td>
-      <td>{{satellite.orbitType}}</td>
-      <td>{{satellite.launchDate}}</td>
-  </tr>
-   </ng-template>
+   <!-- <ng-template #shouldNotShowWarning>
+      <tr *ngFor= "let satellite of satellites">
+      <td>{{satellite.type}} </td>
+      </tr>
+   </ng-template> -->
+   
+
 
 </table>
