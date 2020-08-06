@@ -12,5 +12,13 @@ this.operational = operational;
 this.launchDate = launchDate;
 
     }
+
+shouldShowWarning() {
+    if(this.type !== 'Space Debris') {
+        return false
+    } else {
+        return true
+    }
+}
 }
 

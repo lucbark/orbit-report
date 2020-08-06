@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Satellite } from './satellite';
-import { ConsoleReporter } from 'jasmine';
+//import { ConsoleReporter } from 'jasmine';
 
 @Component({
   selector: 'app-root',
@@ -37,6 +37,7 @@ constructor() {
 
      }.bind(this));
   }.bind(this));
+  
 
 }
 
